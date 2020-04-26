@@ -1,6 +1,6 @@
 # Site settings
-title:
-email:
+title: Tina Meidell
+email: timemeidell@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
@@ -8,8 +8,6 @@ url: "" # the base hostname & protocol for your site
 twitter_username:
 github_username: tinameidell
 linkedin_username: tinameidell
-
-# test
 
 # Build settings
 markdown: kramdown
