@@ -9,5 +9,11 @@ github_username: tinameidell
 linkedin_username: tinameidell
 contact_description:
 
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+
 # Build settings
 markdown: kramdown

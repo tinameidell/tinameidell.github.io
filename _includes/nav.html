@@ -8,20 +8,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">{{ site.title }}</a>
+            <a class="navbar-brand page-scroll" href="{{ "#page-top" | absolute_url }}">{{ site.title }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">Om meg</a>
+                    <a class="page-scroll" href="{{ "#about" | absolute_url }}">Om meg</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="{{ "#portfolio" | absolute_url }}">Portfolio</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Kontakt</a>
+                    <a class="page-scroll" href="{{ "#contact" | absolute_url }}">Kontakt</a>
                 </li>
             </ul>
         </div>

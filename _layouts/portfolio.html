@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include nav.html %}
+  <header style="background-image: url('{{ page.header-img | absolute_url }}');">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>{{ page.title }}</h1>
+            <hr>
+        </div>
+    </div>
+  </header>
+  <section class="no-padding" id="{{ page.id }}">
+    <div class="container-fluid">
+      <div class="row no-gutter">
+  {% assign image_files = site.static_files | where: "image", true %}
+  {% assign accepted_base = "assets/images/" | append: page.id | append: '/' %}
+  {% for image in image_files %}
+  {% if image.path contains accepted_base %}
+  {% unless image.path contains '-th.' %}
+        <div class="col-lg-4 col-sm-6">
+          <a href="{{ image.path | absolute_url }}" class="portfolio-box">
+	        <img src="{{ accepted_base | append: image.basename | append: '-th' | append: image.extname | absolute_url }}" class="img-responsive" alt="">
+          </a>
+        </div>
+  {% endunless %}
+  {% endif %}
+  {% endfor %}
+    </div>
+  </section>
+  {% include scripts.html %}
+</body>
+
+</html>
